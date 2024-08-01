@@ -13,7 +13,7 @@ Follow these steps to set up the project:
 
 1. **Clone the Repository:**
    ```sh
-   git clone https://git.cs.dal.ca/jdurairaj/csci-4140.git
+   git clone https://github.com/Jdurairaj-hub/Purchase-Order.git
    cd assn_2
 
 2. **Install Backend Dependencies:**
