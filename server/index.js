@@ -7,6 +7,8 @@ app.use(cors());
 
 const db = require("./models");
 
+const path = require("path");
+
 // Routers
 const partsRouter = require('./routes/parts');
 const poRouter = require('./routes/pos');
@@ -19,6 +21,16 @@ app.use("/pos", poRouter);
 app.use("/findpos", findposRouter);
 app.use('/preparePo', preparePoRouter);
 app.use('/submitPo', submitPoRouter);
+
+app.use(express.json());
+const _dirname = path.dirname("")
+const buildpath = path.join(_dirname, "../client/build")
+app.use(express.static(buildpath));
+app.use(
+    cors({
+        "origin": "*",
+    })
+);
 
 db.sequelize.sync().then(() => {
     app.listen(3001, () => {
