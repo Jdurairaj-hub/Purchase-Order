@@ -11,7 +11,7 @@ const ListPOs = () => {
   const [listofPOs, setListOfPOs] = useState([]);
 
   useEffect(() => {
-    axios.get("http://localhost:3001/pos").then((response) => {
+    axios.get("http://3.138.137.223:3001/pos").then((response) => {
       console.log(response);
       setListOfPOs(response.data)
     })

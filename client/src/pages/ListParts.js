@@ -11,7 +11,7 @@ const ListParts = () => {
   const [listofParts, setListOfParts] = useState([]);
 
   useEffect(() => {
-    axios.get("http://localhost:3001/parts").then((response) => {
+    axios.get("http://3.138.137.223:3001/parts").then((response) => {
       console.log(response);
       setListOfParts(response.data)
     })

@@ -11,7 +11,7 @@ const FindPO = () => {
     setError(null);
     setPoData(null);
     try {
-      const response = await axios.get(`http://localhost:3001/findpos/${poNo}`);
+      const response = await axios.get(`http://3.138.137.223:3001/findpos/${poNo}`);
       console.log(response);
       setPoData(response.data);
     } catch (err) {

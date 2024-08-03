@@ -1,9 +1,9 @@
 {
   "development": {
-    "username": "jdurairaj",
-    "password": "kZPAmuMxf92q4ihv8wGnrUWhc",
+    "username": "root",
+    "password": "Step123",
     "database": "jdurairaj",
-    "host": "db.cs.dal.ca",
+    "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "test": {

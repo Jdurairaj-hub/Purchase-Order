@@ -21,7 +21,7 @@ const AddLines = ({ tempPoId }) => {
   const handleSubmitLines = async () => {
     setError(null);
     try {
-      await axios.post(`http://localhost:3001/preparePo/prepare/${tempPoId}/lines`, {
+      await axios.post(`http://3.138.137.223:3001/preparePo/prepare/${tempPoId}/lines`, {
         lines,
       });
       setLines([]);

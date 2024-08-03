@@ -17,7 +17,7 @@ const ManagePO = () => {
   const handlePreparePO = async () => {
     setError(null);
     try {
-      const response = await axios.post('http://localhost:3001/preparePo/prepare', {
+      const response = await axios.post('http://3.138.137.223:3001/preparePo/prepare', {
         clientCompID,
         dateOfPO,
         status,
@@ -41,7 +41,7 @@ const ManagePO = () => {
   const handleSubmitLines = async () => {
     setError(null);
     try {
-      await axios.post(`http://localhost:3001/preparePo/prepare/${tempPoId}/lines`, { lines });
+      await axios.post(`http://3.138.137.223:3001/preparePo/prepare/${tempPoId}/lines`, { lines });
       setLines([]);
       alert('Lines added to PO');
     } catch (err) {
