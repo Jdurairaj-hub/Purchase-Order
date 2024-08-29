@@ -69,6 +69,9 @@ WantedBy=multi-user.target
 
 This service file ensures that the Node.js backend server runs as a background service on the EC2 instance, with automatic restarts in case of failure. 
 
+## Architecture
+![Architecture](images/architecture.png)
+
 ## Images
 
 ### Home Page
