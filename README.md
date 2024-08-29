@@ -47,3 +47,12 @@ Follow these steps to set up the project:
 ### Find Purchase Order
 ![Find Purchase Order](images/find_po.png)
 
+### Home Page
+![Home Page](images/home.png)
+
+### List Purchase Order
+![List Purchase Order](images/list_po.png)
+
+### List Parts
+![List Parts](images/list_parts.png)
+
