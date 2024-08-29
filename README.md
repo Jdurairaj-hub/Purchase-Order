@@ -3,6 +3,10 @@
 ## Introduction
 This project is developed for the CSCI 4140 Advanced Database Systems course. It is a Purchase Order Management System that includes functionalities for preparing purchase orders (POs), adding lines to POs, and submitting POs. The system also allows listing parts and purchase orders. The project consists of a frontend built with React, a backend API built with Express.js, and a MySQL database.
 
+## Deployment
+The application is deployed on an AWS EC2 instance and is accessible via a domain managed by AWS Route 53. This setup allows for scalable and reliable hosting of the application.
+
+
 ## Prerequisites
 - Node.js (v20.14.0 or higher)
 - MySQL Server (v8.0 or higher)
@@ -40,15 +44,38 @@ Follow these steps to set up the project:
 3. **Access the Application:**
     Open your browser and navigate to `http://localhost:3001` for back-end
     Open your browser and navigate to `http://localhost:3000` for front-end
-    
+
+## Systemd Service File
+
+To ensure the backend server starts automatically with the system and restarts on failure, the following `systemd` service file is used:
+
+```ini
+[Unit]
+Description=Node.js App
+After=network.target
+
+[Service]
+User=ubuntu
+WorkingDirectory=/home/ubuntu/Purchase-Order/server
+ExecStart=/usr/bin/npm start
+Restart=always
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=my_purchase_order
+
+[Install]
+WantedBy=multi-user.target
+```
+
+This service file ensures that the Node.js backend server runs as a background service on the EC2 instance, with automatic restarts in case of failure. 
 
 ## Images
 
-### Find Purchase Order
-![Find Purchase Order](images/find_po.png)
-
 ### Home Page
 ![Home Page](images/home.png)
+
+### Find Purchase Order
+![Find Purchase Order](images/find_po.png)
 
 ### List Purchase Order
 ![List Purchase Order](images/list_po.png)
