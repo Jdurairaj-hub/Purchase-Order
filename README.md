@@ -42,5 +42,8 @@ Follow these steps to set up the project:
     Open your browser and navigate to `http://localhost:3000` for front-end
     
 
+## Images
 
+### Find Purchase Order
+![Find Purchase Order](images/find_po.png)
 
